@@ -1,5 +1,7 @@
 package pacman.render;
 
-public interface Renderer<T> {
-    void onRender(T toRender);
+import java.awt.*;
+
+public interface Renderer<T extends Renderable> {
+    void onRender(Graphics2D graphics, T toRender);
 }

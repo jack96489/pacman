@@ -1,7 +1,7 @@
-import pacman.render.SwingRenderManager;
+import pacman.PacmanGame;
 
 public class Main {
     public static void main(String[] args) {
-        new SwingRenderManager().render();
+        PacmanGame.getInstance().setup();
     }
 }
