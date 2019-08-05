@@ -5,7 +5,7 @@ import pacman.entity.Pacman;
 import java.awt.*;
 
 
-public class PacmanRenderer extends BaseCreaturaRenderer<Pacman>{
+public class PacmanRenderer extends BaseSwingRenderer<Pacman> {
     public PacmanRenderer(SwingRenderManager renderManager) {
         super(renderManager);
     }

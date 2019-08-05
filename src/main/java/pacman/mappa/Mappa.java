@@ -1,13 +1,12 @@
 package pacman.mappa;
 
 import pacman.Costanti;
-import pacman.render.Renderable;
 
 import java.awt.*;
 import java.util.Random;
 
-public class Mappa implements Renderable, Costanti {
-    private Cella[][] mappa;
+public class Mappa implements Costanti {
+    private final Cella[][] mappa;
 
     public Mappa() {
         final Random rn=new Random();
@@ -19,13 +18,16 @@ public class Mappa implements Renderable, Costanti {
         }
     }
 
-    @Override
-    public void onRender(Graphics2D graphics) {
+    public void render(Graphics2D graphics) {
         for (Cella[] cellas : mappa) {
             for (Cella cella : cellas) {
                 System.out.println(cella);
                 cella.onRender(graphics);
             }
         }
+    }
+
+    public Cella getCella(int x,int y) {
+        return mappa[x][y];
     }
 }

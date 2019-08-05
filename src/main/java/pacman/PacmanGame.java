@@ -2,6 +2,7 @@ package pacman;
 
 import pacman.entity.Fantasma;
 import pacman.entity.Pacman;
+import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
 import pacman.render.SwingRenderManager;
 import pacman.threads.BaseThread;
@@ -13,6 +14,7 @@ public class PacmanGame {
 
     private static PacmanGame INSTANCE;
     private RenderManager renderManager;
+    private Mappa gameMap;
     private List<Fantasma> fantasmi;
     private Pacman pacman;
 
@@ -22,6 +24,7 @@ public class PacmanGame {
 
     public void setup(){
         renderManager=new SwingRenderManager();
+        gameMap=new Mappa();
         fantasmi=new Vector<>();
         for(int i =0;i<5;i++)
             fantasmi.add(new Fantasma());
@@ -46,5 +49,9 @@ public class PacmanGame {
 
     public RenderManager getRenderManager() {
         return renderManager;
+    }
+
+    public Mappa getGameMap() {
+        return gameMap;
     }
 }

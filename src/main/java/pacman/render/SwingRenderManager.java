@@ -2,10 +2,10 @@ package pacman.render;
 
 import pacman.Costanti;
 import pacman.PacmanGame;
-import pacman.entity.BaseCreatura;
 import pacman.entity.Fantasma;
 import pacman.entity.Pacman;
-import pacman.mappa.Mappa;
+import pacman.mappa.Cella;
+import pacman.mappa.CellaRenderer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,11 +19,9 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
     private static final PacmanGame game = PacmanGame.getInstance();
     private JFrame frame;
     private Map rendererMap;
-    private final Mappa mappa;
 
     @SuppressWarnings("unchecked")
     public SwingRenderManager() {
-        mappa=new Mappa();
         this.frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
@@ -33,6 +31,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         rendererMap = new HashMap();
         rendererMap.put(Fantasma.class, new FantasmaRenderer(this));
         rendererMap.put(Pacman.class, new PacmanRenderer(this));
+        rendererMap.put(Cella.class,new CellaRenderer(this));
         frame.addKeyListener(this);
         setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         frame.pack();
@@ -58,7 +57,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         final Graphics2D g2d = (Graphics2D) g;
-        mappa.onRender(g2d);
+        game.getGameMap().render(g2d);
         g2d.setColor(Color.BLUE);
         g2d.drawRect(X_BORDER, Y_BORDER, TABLE_WIDTH, TABLE_HEIGHT);
         System.out.println("render");
@@ -83,7 +82,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
 
     @Override
     @SuppressWarnings("unchecked")
-    public <T extends Renderable> Renderer<T> getRendererFor(Class<? extends BaseCreatura> type) {
+    public <T extends Renderable> Renderer<T> getRendererFor(Class<? extends BaseRenderable> type) {
         return (Renderer<T>) rendererMap.get(type);
     }
 

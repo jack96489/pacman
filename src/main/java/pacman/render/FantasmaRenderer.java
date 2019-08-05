@@ -4,7 +4,7 @@ import pacman.entity.Fantasma;
 
 import java.awt.*;
 
-public class FantasmaRenderer extends BaseCreaturaRenderer<Fantasma> {
+public class FantasmaRenderer extends BaseSwingRenderer<Fantasma> {
     public FantasmaRenderer(SwingRenderManager renderManager) {
         super(renderManager);
     }
