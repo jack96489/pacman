@@ -39,6 +39,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         frame.addKeyListener(this);
         setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         frame.pack();
+        setBackground(Color.BLACK);
     }
 
     @Override
@@ -46,7 +47,6 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         if (!frame.isVisible())
             frame.setVisible(true);
         repaint();
-        System.out.println(getHeight());
     }
 
     @Override
@@ -64,9 +64,10 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         game.getGameMap().render(g2d);
         g2d.setColor(Color.BLUE);
         g2d.drawRect(X_BORDER, Y_BORDER, TABLE_WIDTH, TABLE_HEIGHT);
-        System.out.println("render");
+        //System.out.println("render");
         game.getFantasmi().forEach(f->f.onRender(g2d));
         game.getPacman().onRender(g2d);
+        g2d.drawString( Integer.toString(game.getPunti()),FRAME_WIDTH/2,10);
     }
 
     @Override
@@ -75,7 +76,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
 
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println(e.getKeyCode());
+        //System.out.println(e.getKeyCode());
         game.getPacman().onKeyPressed(e.getKeyCode());
     }
 

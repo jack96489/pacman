@@ -5,7 +5,6 @@ import pacman.entity.Pacman;
 import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
 import pacman.render.swing.SwingRenderManager;
-import pacman.threads.BaseThread;
 import pacman.threads.PacmanThread;
 import pacman.threads.RenderThread;
 
@@ -19,6 +18,7 @@ public class PacmanGame {
     private Mappa gameMap;
     private List<Fantasma> fantasmi;
     private Pacman pacman;
+    private int punti;
 
 
     private PacmanGame() {
@@ -34,6 +34,7 @@ public class PacmanGame {
         renderManager.render();
         new PacmanThread(pacman,this).start();
         new RenderThread(pacman,this).start();
+        punti=0;
 
     }
 
@@ -57,5 +58,18 @@ public class PacmanGame {
 
     public Mappa getGameMap() {
         return gameMap;
+    }
+
+    public void melaMangiata(){
+        punti++;
+    }
+
+    public void melonaMangiato(){
+        punti+=5;
+        //TODO: disattiva fantasmi
+    }
+
+    public int getPunti() {
+        return punti;
     }
 }

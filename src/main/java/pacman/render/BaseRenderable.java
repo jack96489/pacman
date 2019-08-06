@@ -1,10 +1,11 @@
 package pacman.render;
 
+import pacman.Costanti;
 import pacman.PacmanGame;
 
 import java.awt.*;
 
-public abstract class BaseRenderable<T extends BaseRenderable> implements Renderable{
+public abstract class BaseRenderable<T extends BaseRenderable> implements Renderable, Costanti {
     protected final Renderer<T> renderer;
     protected int x,y;
     protected final int width, height;
@@ -43,5 +44,21 @@ public abstract class BaseRenderable<T extends BaseRenderable> implements Render
 
     public Color getColor() {
         return color;
+    }
+
+    public int getMiddleX(){
+        return x+width/2;
+    }
+
+    public int getMiddleY(){
+        return y+height/2;
+    }
+
+    protected int getTableX(){
+        return (int) Math.floor((getMiddleX() - (float)X_BORDER) / (float)CELL_WIDTH);
+    }
+
+    protected int getTableY(){
+        return (int) Math.floor((getMiddleY() - (float)Y_BORDER) / (float)CELL_HEIGHT);
     }
 }

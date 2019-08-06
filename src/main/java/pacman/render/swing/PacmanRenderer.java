@@ -12,9 +12,9 @@ public class PacmanRenderer extends BaseSwingRenderer<Pacman> {
 
     @Override
     public void onRender(Graphics2D g2d, Pacman toRender) {
-        System.out.println("pacman render");
-        System.out.println(toRender);
-        System.out.println(g2d);
+        //System.out.println("pacman render");
+        //System.out.println(toRender);
+        //System.out.println(g2d);
         g2d.setColor(toRender.getColor());
         int startAngle=0;
         switch (toRender.getCurrentDir()){

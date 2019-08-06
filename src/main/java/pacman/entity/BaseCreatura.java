@@ -13,27 +13,28 @@ import java.util.List;
 
 
 public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderable<T> implements Entity, Costanti {
+    protected static final PacmanGame game = PacmanGame.getInstance();
     protected Direction currentDir;
 
     public BaseCreatura() {
-        this(0,0,CREATURA_WIDTH,CREATURA_HEIGHT, Color.BLACK);
+        this(X_BORDER + NUM_COLONNE/2*CELL_WIDTH+(CELL_WIDTH-CREATURA_WIDTH)/2, Y_BORDER +NUM_RIGHE/2*CELL_HEIGHT+(CELL_HEIGHT-CREATURA_HEIGHT)/2, CREATURA_WIDTH, CREATURA_HEIGHT, Color.BLACK);
     }
 
     public BaseCreatura(int x, int y, int width, int height, Color color) {
-        super(x,y,width,height,color);
-        currentDir= Direction.RIGHT;
+        super(x, y, width, height, color);
+        currentDir = Direction.RIGHT;
     }
 
-    public List<Direction> possibleNewDirections(){
-        List<Direction> possibleDirs=new ArrayList<>();
+    public List<Direction> possibleNewDirections() {
+        List<Direction> possibleDirs = new ArrayList<>();
 
-        if(PacmanGame.getInstance().getGameMap().getCella(x+1,y).canBeUsed())
+        if (PacmanGame.getInstance().getGameMap().getCella(x + 1, y).canBeUsed())
             possibleDirs.add(Direction.RIGHT);
-        if(PacmanGame.getInstance().getGameMap().getCella(x-1,y).canBeUsed())
+        if (PacmanGame.getInstance().getGameMap().getCella(x - 1, y).canBeUsed())
             possibleDirs.add(Direction.LEFT);
-        if(PacmanGame.getInstance().getGameMap().getCella(x,y+1).canBeUsed())
+        if (PacmanGame.getInstance().getGameMap().getCella(x, y + 1).canBeUsed())
             possibleDirs.add(Direction.DOWN);
-        if(PacmanGame.getInstance().getGameMap().getCella(x,y-1).canBeUsed())
+        if (PacmanGame.getInstance().getGameMap().getCella(x, y - 1).canBeUsed())
             possibleDirs.add(Direction.UP);
 
         possibleDirs.remove(currentDir);
@@ -51,10 +52,10 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
         return currentDir;
     }
 
-    public Cella getCella(){
-        int x=(this.x-X_BORDER)/TABLE_WIDTH;
-        int y=(this.y-Y_BORDER)/TABLE_HEIGHT;
+    public Cella getCella() {
+        int x = (this.x - X_BORDER) / TABLE_WIDTH;
+        int y = (this.y - Y_BORDER) / TABLE_HEIGHT;
 
-        return PacmanGame.getInstance().getGameMap().getCella(x,y);
+        return PacmanGame.getInstance().getGameMap().getCella(x, y);
     }
 }

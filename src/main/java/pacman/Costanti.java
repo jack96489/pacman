@@ -2,20 +2,22 @@ package pacman;
 
 public interface Costanti {
 
+    int scale = 2;
+
     int TPS = 60;
     int FPS = 144;
 
-    int FRAME_WIDTH = 800, FRAME_HEIGHT = 650;
-    int TABLE_WIDTH = 750, TABLE_HEIGHT = 570;
-    int CREATURA_WIDTH = 20, CREATURA_HEIGHT = 20;
-    int CELL_WIDTH=30,CELL_HEIGHT=30;
-    int CELL_MARGIN=10;
-    int NUM_CELL_X=25,NUM_CELL_Y=19;
+    int FRAME_WIDTH = 450 * scale, FRAME_HEIGHT = 500 * scale;
+    int TABLE_WIDTH = 420 * scale, TABLE_HEIGHT = 465 * scale;
+    int CREATURA_WIDTH = 10 * scale, CREATURA_HEIGHT = 10 * scale;
+    int CELL_WIDTH = 15 * scale, CELL_HEIGHT = 15 * scale;
+    int CELL_MARGIN = 5 * scale;
+    int NUM_COLONNE = 28, NUM_RIGHE = 31;
 
-    int MOVEMENT_SPEED = 2;
-    int MOVEMENT_ERROR_MARGIN = 3;
+    int MOVEMENT_SPEED = 1*scale;
+    int MOVEMENT_ERROR_MARGIN = MOVEMENT_SPEED;
     int MAX_STORED_MOVES = 4;
 
-    int X_BORDER=(FRAME_WIDTH - TABLE_WIDTH) / 2;
-    int Y_BORDER=(FRAME_HEIGHT - TABLE_HEIGHT) / 2;
+    int X_BORDER = (FRAME_WIDTH - TABLE_WIDTH) / 2;
+    int Y_BORDER = (FRAME_HEIGHT - TABLE_HEIGHT) / 2;
 }
