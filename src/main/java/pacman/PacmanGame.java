@@ -4,8 +4,10 @@ import pacman.entity.Fantasma;
 import pacman.entity.Pacman;
 import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
-import pacman.render.SwingRenderManager;
+import pacman.render.swing.SwingRenderManager;
 import pacman.threads.BaseThread;
+import pacman.threads.PacmanThread;
+import pacman.threads.RenderThread;
 
 import java.util.List;
 import java.util.Vector;
@@ -30,7 +32,9 @@ public class PacmanGame {
             fantasmi.add(new Fantasma());
         pacman=new Pacman();
         renderManager.render();
-        new BaseThread(pacman,this).start();
+        new PacmanThread(pacman,this).start();
+        new RenderThread(pacman,this).start();
+
     }
 
     public static PacmanGame getInstance() {

@@ -1,8 +1,8 @@
 package pacman.mappa;
 
 import pacman.Costanti;
-import pacman.render.BaseSwingRenderer;
-import pacman.render.SwingRenderManager;
+import pacman.render.swing.BaseSwingRenderer;
+import pacman.render.swing.SwingRenderManager;
 
 import java.awt.*;
 

@@ -1,4 +1,4 @@
-package pacman.render;
+package pacman.render.swing;
 
 import pacman.entity.Fantasma;
 

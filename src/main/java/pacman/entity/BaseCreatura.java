@@ -46,27 +46,15 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
         return renderer;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public Color getColor() {
-        return color;
-    }
 
     public Direction getCurrentDir() {
         return currentDir;
+    }
+
+    public Cella getCella(){
+        int x=(this.x-X_BORDER)/TABLE_WIDTH;
+        int y=(this.y-Y_BORDER)/TABLE_HEIGHT;
+
+        return PacmanGame.getInstance().getGameMap().getCella(x,y);
     }
 }

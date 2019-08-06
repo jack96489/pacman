@@ -4,7 +4,7 @@ import pacman.Costanti;
 import pacman.PacmanGame;
 import pacman.entity.BaseCreatura;
 
-public class BaseThread extends Thread implements Costanti {
+public abstract class BaseThread extends Thread implements Costanti {
     protected BaseCreatura creatura;
     protected PacmanGame dati;
 
@@ -13,16 +13,4 @@ public class BaseThread extends Thread implements Costanti {
         this.dati = dati;
     }
 
-    @Override
-    public void run() {
-        while(!isInterrupted()) {
-            try {
-                creatura.onTick();
-                dati.getRenderManager().render();
-                sleep(TPS);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }

@@ -12,7 +12,7 @@ public interface Costanti {
     int CELL_MARGIN=10;
     int NUM_CELL_X=25,NUM_CELL_Y=19;
 
-    int MOVEMENT_SPEED = 4;
+    int MOVEMENT_SPEED = 2;
     int MOVEMENT_ERROR_MARGIN = 3;
     int MAX_STORED_MOVES = 4;
 

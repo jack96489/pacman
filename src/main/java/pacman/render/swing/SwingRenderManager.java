@@ -1,4 +1,4 @@
-package pacman.render;
+package pacman.render.swing;
 
 import pacman.Costanti;
 import pacman.PacmanGame;
@@ -6,6 +6,10 @@ import pacman.entity.Fantasma;
 import pacman.entity.Pacman;
 import pacman.mappa.Cella;
 import pacman.mappa.CellaRenderer;
+import pacman.render.BaseRenderable;
+import pacman.render.RenderManager;
+import pacman.render.Renderable;
+import pacman.render.Renderer;
 
 import javax.swing.*;
 import java.awt.*;

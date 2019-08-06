@@ -3,8 +3,8 @@ package pacman.threads;
 import pacman.PacmanGame;
 import pacman.entity.BaseCreatura;
 
-public class PacmanThread extends BaseThread {
-    public PacmanThread(BaseCreatura creatura, PacmanGame dati) {
+public class RenderThread extends BaseThread {
+    public RenderThread(BaseCreatura creatura, PacmanGame dati) {
         super(creatura, dati);
     }
 
@@ -12,8 +12,8 @@ public class PacmanThread extends BaseThread {
     public void run() {
         while(!isInterrupted()) {
             try {
-                creatura.onTick();
-                sleep(1000/TPS);
+                dati.getRenderManager().render();
+                sleep(1000/FPS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
