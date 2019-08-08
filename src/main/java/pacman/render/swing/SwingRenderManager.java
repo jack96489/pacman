@@ -67,7 +67,8 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         //System.out.println("render");
         game.getFantasmi().forEach(f->f.onRender(g2d));
         game.getPacman().onRender(g2d);
-        g2d.drawString( Integer.toString(game.getPunti()),FRAME_WIDTH/2,10);
+        g2d.drawString( "Punti: "+Integer.toString(game.getPunti()),FRAME_WIDTH/2-100,Y_BORDER/2);
+        g2d.drawString( "Vite riumanenti: "+Integer.toString(game.getVite()),FRAME_WIDTH/2+100,Y_BORDER/2);
     }
 
     @Override
@@ -89,6 +90,11 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
     @SuppressWarnings("unchecked")
     public <T extends Renderable> Renderer<T> getRendererFor(Class<? extends BaseRenderable> type) {
         return (Renderer<T>) rendererMap.get(type);
+    }
+
+    @Override
+    public void showDialog(String str) {
+        JOptionPane.showMessageDialog(frame,str);
     }
 
 }

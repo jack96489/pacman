@@ -58,8 +58,8 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
                 _x -= CELL_WIDTH / 2 + MOVEMENT_ERROR_MARGIN/2;
                 break;
         }
-        System.out.println("X: " + x + "-" + _x);
-        System.out.println("Y: " + y + "-" + _y);
+//        System.out.println("X: " + x + "-" + _x);
+//        System.out.println("Y: " + y + "-" + _y);
         Cella nuova = game.getGameMap().getCella((_x + width / 2 - X_BORDER) / CELL_WIDTH, (_y + height / 2 - Y_BORDER) / CELL_HEIGHT);
 
         if (nuova.canBeUsed()) {
@@ -97,7 +97,7 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
 //        System.out.println(getMiddleX() - X_BORDER - (getTableX()) * CELL_WIDTH - CELL_WIDTH / 2);
         if (Math.abs(getMiddleX() - X_BORDER - (getTableX()) * CELL_WIDTH - CELL_WIDTH / 2) < MOVEMENT_ERROR_MARGIN && Math.abs(getMiddleY() - Y_BORDER - (getTableY()) * CELL_HEIGHT - CELL_HEIGHT / 2) < MOVEMENT_ERROR_MARGIN)
             return true;
-        System.out.println("Not centered");
+//        System.out.println("Not centered");
         return false;
     }
 

@@ -9,12 +9,12 @@ public interface Costanti {
 
     int FRAME_WIDTH = 450 * scale, FRAME_HEIGHT = 500 * scale;
     int TABLE_WIDTH = 420 * scale, TABLE_HEIGHT = 465 * scale;
-    int CREATURA_WIDTH = 10 * scale, CREATURA_HEIGHT = 10 * scale;
+    int CREATURA_WIDTH = 12 * scale, CREATURA_HEIGHT = 12 * scale;
     int CELL_WIDTH = 15 * scale, CELL_HEIGHT = 15 * scale;
     int CELL_MARGIN = 5 * scale;
     int NUM_COLONNE = 28, NUM_RIGHE = 31;
 
-    int MOVEMENT_SPEED = 1*scale;
+    int MOVEMENT_SPEED = scale;
     int MOVEMENT_ERROR_MARGIN = MOVEMENT_SPEED;
     int MAX_STORED_MOVES = 4;
 

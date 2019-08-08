@@ -47,10 +47,9 @@ public class Fantasma extends BaseCreatura<Fantasma> {
                 newDir = Direction.values()[rnDir.nextInt(Direction.values().length)];
             } while (!canChangeDir(newDir));
             currentDir = newDir;
-        }
-        else if (isCentered() && rnDir.nextInt(3) == 1) {        //1 probabilità su 3 di cambiare direzione
+        } else if (isCentered() && rnDir.nextInt(3) == 1) {        //1 probabilità su 3 di cambiare direzione
             Direction newDir = Direction.values()[rnDir.nextInt(Direction.values().length)];
-            if (canChangeDir(newDir)&&!newDir.isOpposto(currentDir))
+            if (canChangeDir(newDir) && !newDir.isOpposto(currentDir))
                 currentDir = newDir;
         }
     }
@@ -61,6 +60,7 @@ public class Fantasma extends BaseCreatura<Fantasma> {
 
     public class FantasmaImages {
         private final Map<Direction, Image> immagini;
+        private Image vulnerable;
 
         public FantasmaImages() {
             immagini = new HashMap<>();
@@ -81,6 +81,7 @@ public class Fantasma extends BaseCreatura<Fantasma> {
                 immagini.put(Direction.RIGHT, loadImage(imagePrefix + "3right"));
                 immagini.put(Direction.UP, loadImage(imagePrefix + "3up"));
                 immagini.put(Direction.DOWN, loadImage(imagePrefix + "3down"));
+                vulnerable = loadImage("ghost3");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -93,8 +94,27 @@ public class Fantasma extends BaseCreatura<Fantasma> {
         }
 
         public Image getImage() {
-            return immagini.get(currentDir);
+            if (isVulnerable())
+                return vulnerable;
+            else
+                return immagini.get(currentDir);
         }
     }
 
+    public boolean isVulnerable() {
+        return stato == StatoFantasma.VULNERABILE;
+    }
+
+    public void makeVulnerable() {
+        stato = StatoFantasma.VULNERABILE;
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        stato = StatoFantasma.ATTIVO;
+                    }
+                },
+                5000
+        );
+    }
 }

@@ -19,6 +19,7 @@ public class Pacman extends BaseCreatura<Pacman> {
 
     public Pacman() {
         super();
+        y = 23 * CELL_HEIGHT + Y_BORDER + (CREATURA_HEIGHT/10);     //propozione a caso per farlo spawnare giusto
         color = Color.yellow;
         nuoveDirezioni = new LinkedBlockingQueue<>(MAX_STORED_MOVES);
     }
@@ -82,7 +83,6 @@ public class Pacman extends BaseCreatura<Pacman> {
             cellaAttuale.melaMangiata();
         }
     }
-
 
 
 }
