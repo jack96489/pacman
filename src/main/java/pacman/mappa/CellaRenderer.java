@@ -83,6 +83,25 @@ public class CellaRenderer extends BaseSwingRenderer<Cella> implements Costanti 
                 graphics.drawLine(_x,_y+CELL_HEIGHT/2,_x+CELL_WIDTH,_y+CELL_HEIGHT/2);
                 break;
 
+            case ANGOLO_NO:
+                graphics.drawLine(_x+CELL_WIDTH/2,_y+CELL_HEIGHT,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                graphics.drawLine(_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2,_x+CELL_WIDTH,_y+CELL_HEIGHT/2);
+                break;
+
+            case ANGOLO_NE:
+                graphics.drawLine(_x+CELL_WIDTH/2,_y+CELL_HEIGHT,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                graphics.drawLine(_x,_y+CELL_HEIGHT/2,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                break;
+
+            case ANGOLO_SO:
+                graphics.drawLine(_x+CELL_WIDTH/2,_y,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                graphics.drawLine(_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2,_x+CELL_WIDTH,_y+CELL_HEIGHT/2);
+                break;
+
+            case ANGOLO_SE:
+                graphics.drawLine(_x+CELL_WIDTH/2,_y,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                graphics.drawLine(_x,_y+CELL_HEIGHT/2,_x+CELL_WIDTH/2,_y+CELL_HEIGHT/2);
+                break;
         }
     }
 }
