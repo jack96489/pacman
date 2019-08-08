@@ -1,28 +1,100 @@
 package pacman.entity;
 
+import pacman.Direction;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Random;
 
 public class Fantasma extends BaseCreatura<Fantasma> {
+    private final Random rnDir = new Random();
 
-    public enum StatoFantasma{ATTIVO, VULNERABILE}
+    private final FantasmaImages immagini;
+
+    public enum StatoFantasma {ATTIVO, VULNERABILE}
+
     private StatoFantasma stato;
-    public Fantasma() {
+
+    public Fantasma(Color colore) {
         super();
-        stato=StatoFantasma.ATTIVO;
+        this.color = colore;
+        stato = StatoFantasma.ATTIVO;
+        immagini = new FantasmaImages();
     }
 
     public Fantasma(int x, int y, int width, int height, Color color) {
         super(x, y, width, height, color);
-        stato=StatoFantasma.ATTIVO;
+        stato = StatoFantasma.ATTIVO;
+        immagini = new FantasmaImages();
     }
 
     @Override
     public void onKeyPressed(int key) {
-
+        throw new UnsupportedOperationException("Ghost can't press a key :(");
     }
 
     @Override
     public void onTick() {
-
+        if (!checkMovement()) {
+            Direction newDir;
+            do {
+                newDir = Direction.values()[rnDir.nextInt(Direction.values().length)];
+            } while (!canChangeDir(newDir));
+            currentDir = newDir;
+        }
+        else if (isCentered() && rnDir.nextInt(3) == 1) {        //1 probabilità su 3 di cambiare direzione
+            Direction newDir = Direction.values()[rnDir.nextInt(Direction.values().length)];
+            if (canChangeDir(newDir)&&!newDir.isOpposto(currentDir))
+                currentDir = newDir;
+        }
     }
+
+    public Image getImage() {
+        return immagini.getImage();
+    }
+
+    public class FantasmaImages {
+        private final Map<Direction, Image> immagini;
+
+        public FantasmaImages() {
+            immagini = new HashMap<>();
+            String imagePrefix;
+            if (color == Color.cyan)
+                imagePrefix = "inky";
+            else if (color == Color.red)
+                imagePrefix = "blinky";
+            else if (color == Color.orange)
+                imagePrefix = "clyde";
+            else if (color == Color.pink)
+                imagePrefix = "pinky";
+            else
+                throw new IllegalStateException("Unexpected value: " + color);
+
+            try {
+                immagini.put(Direction.LEFT, loadImage(imagePrefix + "3left"));
+                immagini.put(Direction.RIGHT, loadImage(imagePrefix + "3right"));
+                immagini.put(Direction.UP, loadImage(imagePrefix + "3up"));
+                immagini.put(Direction.DOWN, loadImage(imagePrefix + "3down"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        private BufferedImage loadImage(String name) throws IOException {
+            InputStream resourceBuff = ClassLoader.getSystemResourceAsStream("icons/" + name + ".png");
+            return ImageIO.read(Objects.requireNonNull(resourceBuff));
+        }
+
+        public Image getImage() {
+            return immagini.get(currentDir);
+        }
+    }
+
 }

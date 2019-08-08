@@ -3,8 +3,8 @@ package pacman.threads;
 import pacman.PacmanGame;
 import pacman.entity.BaseCreatura;
 
-public class PacmanThread extends BaseThread {
-    public PacmanThread(BaseCreatura creatura, PacmanGame dati) {
+public class CreaturaThread extends BaseThread {
+    public CreaturaThread(BaseCreatura creatura, PacmanGame dati) {
         super(creatura, dati);
     }
 

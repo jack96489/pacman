@@ -5,9 +5,10 @@ import pacman.entity.Pacman;
 import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
 import pacman.render.swing.SwingRenderManager;
-import pacman.threads.PacmanThread;
+import pacman.threads.CreaturaThread;
 import pacman.threads.RenderThread;
 
+import java.awt.*;
 import java.util.List;
 import java.util.Vector;
 
@@ -24,23 +25,27 @@ public class PacmanGame {
     private PacmanGame() {
     }
 
-    public void setup(){
-        renderManager=new SwingRenderManager();
-        gameMap=new Mappa();
-        fantasmi=new Vector<>();
-        for(int i =0;i<5;i++)
-            fantasmi.add(new Fantasma());
-        pacman=new Pacman();
+    public void setup() {
+        renderManager = new SwingRenderManager();
+        gameMap = new Mappa();
+        fantasmi = new Vector<>();
+        fantasmi.add(new Fantasma(Color.CYAN));
+        fantasmi.add(new Fantasma(Color.RED));
+        fantasmi.add(new Fantasma(Color.orange));
+        fantasmi.add(new Fantasma(Color.pink));
+        pacman = new Pacman();
         renderManager.render();
-        new PacmanThread(pacman,this).start();
-        new RenderThread(pacman,this).start();
-        punti=0;
+        new CreaturaThread(pacman, this).start();
+        for (Fantasma f : fantasmi)
+            new CreaturaThread(f, this).start();
+        new RenderThread(pacman, this).start();
+        punti = 0;
 
     }
 
     public static PacmanGame getInstance() {
-        if(INSTANCE==null)
-            INSTANCE=new PacmanGame();
+        if (INSTANCE == null)
+            INSTANCE = new PacmanGame();
         return INSTANCE;
     }
 
@@ -60,12 +65,12 @@ public class PacmanGame {
         return gameMap;
     }
 
-    public void melaMangiata(){
+    public void melaMangiata() {
         punti++;
     }
 
-    public void melonaMangiato(){
-        punti+=5;
+    public void melonaMangiato() {
+        punti += 5;
         //TODO: disattiva fantasmi
     }
 
