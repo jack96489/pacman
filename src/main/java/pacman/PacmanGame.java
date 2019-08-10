@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.Semaphore;
 
-public class PacmanGame implements Costanti{
+public class PacmanGame implements Costanti {
 
     private static PacmanGame INSTANCE;
     private RenderManager renderManager;
@@ -25,12 +25,15 @@ public class PacmanGame implements Costanti{
     private int punti;
     private int vite;
     private BaseThread[] threads;
+    private Semaphore semMuovi, semControlla;
 
 
     private PacmanGame() {
     }
 
     public void setup() {
+        semMuovi = new Semaphore(0);
+        semControlla = new Semaphore(NUM_FANTASMI + 1);
         renderManager = new SwingRenderManager();
         gameMap = new Mappa();
         fantasmi = new Vector<>();
@@ -39,18 +42,18 @@ public class PacmanGame implements Costanti{
         fantasmi.add(new Fantasma(Color.orange));
         fantasmi.add(new Fantasma(Color.pink));
         pacman = new Pacman();
-        threads=new BaseThread[fantasmi.size()+2];
+        threads = new BaseThread[fantasmi.size() + 2];
         renderManager.render();
         for (int i = 0; i < fantasmi.size(); i++) {
             threads[i] = new CreaturaThread(fantasmi.get(i), this);
         }
         threads[fantasmi.size()] = new CreaturaThread(pacman, this);
-        threads[fantasmi.size()+1] = new chkMangiatoThread(pacman, this);
+        threads[fantasmi.size() + 1] = new chkMangiatoThread(pacman, this);
         for (Thread t : threads)
             t.start();
         new RenderThread(pacman, this).start();
         punti = 0;
-        vite=3;
+        vite = 3;
     }
 
     public static PacmanGame getInstance() {
@@ -75,11 +78,11 @@ public class PacmanGame implements Costanti{
         return gameMap;
     }
 
-    public void melaMangiata() {
+    public synchronized void melaMangiata() {
         punti++;
     }
 
-    public void melonaMangiato() {
+    public synchronized void melonaMangiato() {
         punti += 5;
         for (Fantasma f : fantasmi)
             f.makeVulnerable();
@@ -93,12 +96,23 @@ public class PacmanGame implements Costanti{
         return vite;
     }
 
-    public void gameOver(){
+    public Semaphore getSemMuovi() {
+        return semMuovi;
+    }
+
+    public Semaphore getSemControlla() {
+        return semControlla;
+    }
+
+
+
+    public synchronized void gameOver() {
         System.out.println("MORTO");
         vite--;
-        if(vite<=0){
-            for (Thread t : threads)
+        if (vite <= 0) {
+            for (Thread t : threads) {
                 t.interrupt();
+            }
             renderManager.showDialog("Game over");
         }
     }

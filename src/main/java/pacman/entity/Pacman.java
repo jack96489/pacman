@@ -62,7 +62,7 @@ public class Pacman extends BaseCreatura<Pacman> {
                 currentDir = nuoveDirezioni.poll();
             else {
                 final List<Direction> newDirs = new ArrayList<>(nuoveDirezioni);
-                System.out.println(newDirs.size());
+//                System.out.println(newDirs.size());
                 for (int i = 1; i < nuoveDirezioni.size(); i++)
                     if (canChangeDir(newDirs.get(i)) && isCentered()) {
                         currentDir = newDirs.get(i);

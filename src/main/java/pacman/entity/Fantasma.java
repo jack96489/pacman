@@ -107,6 +107,9 @@ public class Fantasma extends BaseCreatura<Fantasma> {
 
     public void makeVulnerable() {
         stato = StatoFantasma.VULNERABILE;
+        Direction newDir = currentDir.getOpposto();
+        if (canChangeDir(newDir))
+            currentDir = newDir;
         new java.util.Timer().schedule(
                 new java.util.TimerTask() {
                     @Override
@@ -114,7 +117,12 @@ public class Fantasma extends BaseCreatura<Fantasma> {
                         stato = StatoFantasma.ATTIVO;
                     }
                 },
-                5000
+                10000
         );
+    }
+
+    public void muori() {
+        x = X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2;
+        y = Y_BORDER + NUM_RIGHE / 2 * CELL_HEIGHT + (CELL_HEIGHT - CREATURA_HEIGHT) / 2;
     }
 }

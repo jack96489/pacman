@@ -20,4 +20,6 @@ public interface Costanti {
 
     int X_BORDER = (FRAME_WIDTH - TABLE_WIDTH) / 2;
     int Y_BORDER = (FRAME_HEIGHT - TABLE_HEIGHT) / 2;
+
+    int NUM_FANTASMI = 4;
 }

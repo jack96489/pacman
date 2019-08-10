@@ -15,6 +15,7 @@ import java.util.List;
 public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderable<T> implements Entity, Costanti {
     protected static final PacmanGame game = PacmanGame.getInstance();
     protected Direction currentDir;
+    private boolean appenaMorto = false;
 
     public BaseCreatura() {
         this(X_BORDER + NUM_COLONNE/2*CELL_WIDTH+(CELL_WIDTH-CREATURA_WIDTH)/2, Y_BORDER +NUM_RIGHE/2*CELL_HEIGHT+(CELL_HEIGHT-CREATURA_HEIGHT)/2, CREATURA_WIDTH, CREATURA_HEIGHT, Color.BLACK);
@@ -115,5 +116,22 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
         int y = (this.y - Y_BORDER) / TABLE_HEIGHT;
 
         return PacmanGame.getInstance().getGameMap().getCella(x, y);
+    }
+
+    public boolean isAppenaMorto() {
+        return appenaMorto;
+    }
+
+    public void setAppenaMorto() {
+        this.appenaMorto = true;
+        new java.util.Timer().schedule( //per 2 oltre a quelli in cui il gioco sta fermo non posso essere mangiato
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        appenaMorto = false;
+                    }
+                },
+                5000
+        );
     }
 }
