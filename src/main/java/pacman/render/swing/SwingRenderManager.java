@@ -23,6 +23,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
     private static final PacmanGame game = PacmanGame.getInstance();
     private JFrame frame;
     private Map rendererMap;
+    private static long framesRendered;
 
     @SuppressWarnings("unchecked")
     public SwingRenderManager() {
@@ -69,6 +70,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         game.getPacman().onRender(g2d);
         g2d.drawString( "Punti: "+Integer.toString(game.getPunti()),FRAME_WIDTH/2-100,Y_BORDER/2);
         g2d.drawString( "Vite riumanenti: "+Integer.toString(game.getVite()),FRAME_WIDTH/2+100,Y_BORDER/2);
+        framesRendered++;
     }
 
     @Override
@@ -97,4 +99,7 @@ public class SwingRenderManager extends JPanel implements Costanti, RenderManage
         JOptionPane.showMessageDialog(frame,str);
     }
 
+    public long getFramesRendered() {
+        return framesRendered;
+    }
 }

@@ -13,7 +13,12 @@ public class FantasmaRenderer extends BaseSwingRenderer<Fantasma> {
 
     @Override
     public void onRender(Graphics2D g2d, Fantasma toRender) {
-        g2d.drawImage(toRender.getImage(),toRender.getX(),toRender.getY(),toRender.getWidth(),toRender.getHeight(),null);
+        if (toRender.isAppenaMorto()) {
+            if (renderManager.getFramesRendered() / (FPS / 5) % 2 == 0){
+                g2d.drawImage(toRender.getImage(), toRender.getX(), toRender.getY(), toRender.getWidth(), toRender.getHeight(), null);
+            }
+        } else
+            g2d.drawImage(toRender.getImage(), toRender.getX(), toRender.getY(), toRender.getWidth(), toRender.getHeight(), null);
     }
 
 }
