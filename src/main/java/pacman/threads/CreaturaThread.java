@@ -19,8 +19,7 @@ public class CreaturaThread extends BaseThread {
                 try {
                     creatura.onTick();
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    //ignored.... qualcosa è uscito dalla mappa
-                    //TODO
+                    e.printStackTrace();
                 }
                 sleep(1000 / TPS);
                 dati.getSemMuovi().release();

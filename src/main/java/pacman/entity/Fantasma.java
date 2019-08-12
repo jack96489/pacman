@@ -122,8 +122,9 @@ public class Fantasma extends BaseCreatura<Fantasma> {
     }
 
     public void muori() {
-        setAppenaMorto();
         x = X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2;
         y = Y_BORDER + NUM_RIGHE / 2 * CELL_HEIGHT + (CELL_HEIGHT - CREATURA_HEIGHT) / 2;
+        stato = StatoFantasma.ATTIVO;       //una volta mangiato torna attivo
+        setAppenaMorto();
     }
 }

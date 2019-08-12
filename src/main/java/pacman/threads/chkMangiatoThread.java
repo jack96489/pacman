@@ -2,6 +2,7 @@ package pacman.threads;
 
 import pacman.PacmanGame;
 import pacman.entity.BaseCreatura;
+import pacman.entity.CreatureManager;
 import pacman.entity.Fantasma;
 import pacman.entity.Pacman;
 
@@ -15,10 +16,11 @@ public class chkMangiatoThread extends BaseThread {
 
     @Override
     public void run() {
+        final CreatureManager creature = dati.getCreature();
         while (!isInterrupted()) {
             try {
                 dati.getSemMuovi().acquire(NUM_FANTASMI + 1);
-                for (Fantasma f : dati.getFantasmi()) {
+                for (Fantasma f : creature.getFantasmi()) {
                     if (Math.abs(f.getMiddleX() - creatura.getMiddleX()) < creatura.getWidth() / 2 && Math.abs(f.getMiddleY() - creatura.getMiddleY()) < creatura.getHeight() / 2) {
                         System.out.println("MANGIATO!!");
                         if (f.isVulnerable() && !f.isAppenaMorto()) {

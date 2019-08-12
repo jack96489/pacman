@@ -44,7 +44,7 @@ public abstract class BaseCreatura<T extends BaseCreatura> extends BaseRenderabl
     }
 
     protected boolean checkMovement() {
-        System.out.println(TABLE_WIDTH + X_BORDER - (x + width));
+//        System.out.println(TABLE_WIDTH + X_BORDER - (x + width));
         if (x - X_BORDER < MOVEMENT_SPEED + MOVEMENT_ERROR_MARGIN && currentDir == Direction.LEFT) {
             x += TABLE_WIDTH - width;
             return true;

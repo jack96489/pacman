@@ -1,7 +1,7 @@
 package pacman;
 
+import pacman.entity.CreatureManager;
 import pacman.entity.Fantasma;
-import pacman.entity.Pacman;
 import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
 import pacman.render.swing.SwingRenderManager;
@@ -10,9 +10,6 @@ import pacman.threads.CreaturaThread;
 import pacman.threads.RenderThread;
 import pacman.threads.chkMangiatoThread;
 
-import java.awt.*;
-import java.util.List;
-import java.util.Vector;
 import java.util.concurrent.Semaphore;
 
 public class PacmanGame implements Costanti {
@@ -20,8 +17,7 @@ public class PacmanGame implements Costanti {
     private static PacmanGame INSTANCE;
     private RenderManager renderManager;
     private Mappa gameMap;
-    private List<Fantasma> fantasmi;
-    private Pacman pacman;
+    private CreatureManager creature;
     private int punti;
     private int vite;
     private BaseThread[] threads;
@@ -32,28 +28,8 @@ public class PacmanGame implements Costanti {
     }
 
     public void setup() {
-        semMuovi = new Semaphore(0);
-        semControlla = new Semaphore(NUM_FANTASMI + 1);
         renderManager = new SwingRenderManager();
-        gameMap = new Mappa();
-        fantasmi = new Vector<>();
-        fantasmi.add(new Fantasma(Color.CYAN));
-        fantasmi.add(new Fantasma(Color.RED));
-        fantasmi.add(new Fantasma(Color.orange));
-        fantasmi.add(new Fantasma(Color.pink));
-        pacman = new Pacman();
-        threads = new BaseThread[fantasmi.size() + 2];
-        renderManager.render();
-        for (int i = 0; i < fantasmi.size(); i++) {
-            threads[i] = new CreaturaThread(fantasmi.get(i), this);
-        }
-        threads[fantasmi.size()] = new CreaturaThread(pacman, this);
-        threads[fantasmi.size() + 1] = new chkMangiatoThread(pacman, this);
-        for (Thread t : threads)
-            t.start();
-        new RenderThread(pacman, this).start();
-        punti = 0;
-        vite = 3;
+        reset();
     }
 
     public static PacmanGame getInstance() {
@@ -62,13 +38,6 @@ public class PacmanGame implements Costanti {
         return INSTANCE;
     }
 
-    public List<Fantasma> getFantasmi() {
-        return fantasmi;
-    }
-
-    public Pacman getPacman() {
-        return pacman;
-    }
 
     public RenderManager getRenderManager() {
         return renderManager;
@@ -79,13 +48,12 @@ public class PacmanGame implements Costanti {
     }
 
     public synchronized void melaMangiata() {
-        punti++;
+        punti += 10;
     }
 
     public synchronized void melonaMangiato() {
-        punti += 5;
-        for (Fantasma f : fantasmi)
-            f.makeVulnerable();
+        punti += 50;
+        creature.rendiFantasmiVulnerabili();
     }
 
     public int getPunti() {
@@ -105,7 +73,6 @@ public class PacmanGame implements Costanti {
     }
 
 
-
     public synchronized void gameOver() {
         System.out.println("MORTO");
         vite--;
@@ -113,7 +80,30 @@ public class PacmanGame implements Costanti {
             for (Thread t : threads) {
                 t.interrupt();
             }
-            renderManager.showDialog("Game over");
+            renderManager.showDialog("Game over", "Hai perso! Vuoi ricominciare?", "Si", "No", this::reset, () -> System.exit(0));
         }
+    }
+
+    private void reset() {
+        semMuovi = new Semaphore(0);
+        semControlla = new Semaphore(NUM_FANTASMI + 1);
+        gameMap = new Mappa();
+        creature = new CreatureManager();
+        threads = new BaseThread[NUM_FANTASMI + 2];
+        renderManager.render();
+        for (int i = 0; i < NUM_FANTASMI; i++) {
+            threads[i] = new CreaturaThread(creature.getFantasma(i), this);
+        }
+        threads[NUM_FANTASMI] = new CreaturaThread(creature.getPacman(), this);
+        threads[NUM_FANTASMI + 1] = new chkMangiatoThread(creature.getPacman(), this);
+        for (Thread t : threads)
+            t.start();
+        new RenderThread(creature.getPacman(), this).start();
+        punti = 0;
+        vite = NUM_VITE;
+    }
+
+    public CreatureManager getCreature() {
+        return creature;
     }
 }
