@@ -1,12 +1,10 @@
 package pacman.threads;
 
 import pacman.PacmanGame;
-import pacman.entity.BaseCreatura;
-
-import java.util.concurrent.Semaphore;
+import pacman.entity.BaseActor;
 
 public class CreaturaThread extends BaseThread {
-    public CreaturaThread(BaseCreatura creatura, PacmanGame dati) {
+    public CreaturaThread(BaseActor creatura, PacmanGame dati) {
         super(creatura, dati);
         setName("Thread creatura" + creatura.getClass());
     }

@@ -6,7 +6,7 @@ import pacman.PacmanGame;
 import java.awt.*;
 
 public abstract class BaseRenderable<T extends BaseRenderable> implements Renderable, Costanti {
-    protected final Renderer<T> renderer;
+    private final Renderer<T> renderer;
     protected int x,y;
     protected final int width, height;
     protected Color color;

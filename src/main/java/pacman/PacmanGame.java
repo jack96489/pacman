@@ -1,7 +1,6 @@
 package pacman;
 
-import pacman.entity.CreatureManager;
-import pacman.entity.Fantasma;
+import pacman.entity.ActorManager;
 import pacman.mappa.Mappa;
 import pacman.render.RenderManager;
 import pacman.render.swing.SwingRenderManager;
@@ -17,7 +16,7 @@ public class PacmanGame implements Costanti {
     private static PacmanGame INSTANCE;
     private RenderManager renderManager;
     private Mappa gameMap;
-    private CreatureManager creature;
+    private ActorManager creature;
     private int punti;
     private int vite;
     private BaseThread[] threads;
@@ -88,7 +87,7 @@ public class PacmanGame implements Costanti {
         semMuovi = new Semaphore(0);
         semControlla = new Semaphore(NUM_FANTASMI + 1);
         gameMap = new Mappa();
-        creature = new CreatureManager();
+        creature = new ActorManager();
         threads = new BaseThread[NUM_FANTASMI + 2];
         renderManager.render();
         for (int i = 0; i < NUM_FANTASMI; i++) {
@@ -103,7 +102,7 @@ public class PacmanGame implements Costanti {
         vite = NUM_VITE;
     }
 
-    public CreatureManager getCreature() {
+    public ActorManager getCreature() {
         return creature;
     }
 }

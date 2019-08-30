@@ -23,4 +23,7 @@ public interface Costanti {
 
     int NUM_FANTASMI = 4;
     int NUM_VITE = 3;
+
+    int BLINK_TIME = 5000;
+    int PAUSE_TIME = 3000;
 }

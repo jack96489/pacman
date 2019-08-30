@@ -1,10 +1,10 @@
 package pacman.threads;
 
 import pacman.PacmanGame;
-import pacman.entity.BaseCreatura;
+import pacman.entity.BaseActor;
 
 public class RenderThread extends BaseThread {
-    public RenderThread(BaseCreatura creatura, PacmanGame dati) {
+    public RenderThread(BaseActor creatura, PacmanGame dati) {
         super(creatura, dati);
     }
 
