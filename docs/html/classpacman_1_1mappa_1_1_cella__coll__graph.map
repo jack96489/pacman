@@ -1,0 +1,11 @@
+<map id="Cella" name="Cella">
+<area shape="rect" id="node1" title=" " alt="" coords="286,1277,409,1413"/>
+<area shape="rect" id="node2" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="262,939,433,1207"/>
+<area shape="rect" id="node3" href="$interfacepacman_1_1render_1_1_renderable.html" title=" " alt="" coords="303,5,400,83"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="280,145,423,237"/>
+<area shape="rect" id="node8" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="122,587,309,869"/>
+<area shape="rect" id="node4" href="$interfacepacman_1_1_costanti.html" title=" " alt="" coords="5,300,164,524"/>
+<area shape="rect" id="node5" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="299,373,404,451"/>
+<area shape="rect" id="node7" title=" " alt="" coords="449,373,501,451"/>
+<area shape="rect" id="node9" href="$enumpacman_1_1mappa_1_1_cella_1_1_tipo_cella.html" title=" " alt="" coords="457,932,587,1215"/>
+</map>

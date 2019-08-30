@@ -1,0 +1,5 @@
+<map id="getCella" name="getCella">
+<area shape="rect" id="node1" title=" " alt="" coords="253,46,323,73"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#accc789ca7f51b6cacc2b466a11ff1d40" title="muove l&#39;attore dopo gli opportuni controlli. Utilizzando il metodo Cella#canBeUsed(),..." alt="" coords="21,5,190,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="5,71,205,112"/>
+</map>

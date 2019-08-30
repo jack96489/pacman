@@ -1,0 +1,6 @@
+<map id="getMiddleY" name="getMiddleY">
+<area shape="rect" id="node1" title=" " alt="" coords="260,78,347,105"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a4514a208750231ba8bef2dfa09e4aff0" title="controlla se è posizionato al centro della cella." alt="" coords="21,5,196,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1render_1_1_base_renderable.html#abaa7da5bac0a0f4a5a928b576daf7928" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1threads_1_1chk_mangiato_thread.html#a13a43e6d814de94978c515cb084873b1" title=" " alt="" coords="12,136,205,177"/>
+</map>

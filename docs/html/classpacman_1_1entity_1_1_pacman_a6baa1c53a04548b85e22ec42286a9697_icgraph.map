@@ -1,0 +1,5 @@
+<map id="changeDirection" name="changeDirection">
+<area shape="rect" id="node1" title="cambia direzione. Aggiunge la direzione passata alla code nuoveDirezioni se non è uguale a quella pre..." alt="" coords="395,13,509,39"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_pacman.html#aac06e0f1073c4ce0f8008c13eb6ca1dd" title="tasto premuto. Richiama il metodo changeDirection(Direction) passandogli la direzione corrispondente" alt="" coords="240,13,347,39"/>
+<area shape="rect" id="node3" href="$classpacman_1_1render_1_1swing_1_1_swing_render_manager.html#aa12eb1084be2c4d9b03d5f248f00900d" title=" " alt="" coords="5,5,192,47"/>
+</map>

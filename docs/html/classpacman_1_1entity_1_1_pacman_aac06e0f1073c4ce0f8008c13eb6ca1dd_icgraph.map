@@ -1,0 +1,4 @@
+<map id="onKeyPressed" name="onKeyPressed">
+<area shape="rect" id="node1" title="tasto premuto. Richiama il metodo changeDirection(Direction) passandogli la direzione corrispondente" alt="" coords="240,13,347,39"/>
+<area shape="rect" id="node2" href="$classpacman_1_1render_1_1swing_1_1_swing_render_manager.html#aa12eb1084be2c4d9b03d5f248f00900d" title=" " alt="" coords="5,5,192,47"/>
+</map>

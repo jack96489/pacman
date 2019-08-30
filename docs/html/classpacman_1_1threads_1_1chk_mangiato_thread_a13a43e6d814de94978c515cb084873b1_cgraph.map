@@ -1,0 +1,16 @@
+<map id="run" name="run">
+<area shape="rect" id="node1" title=" " alt="" coords="5,359,45,385"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#a1be508f4f34c521e6a0e7e404260bbd8" title=" " alt="" coords="95,5,321,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1_pacman_game.html#a120fbe4ee15d6360177d87b3e2dc7403" title=" " alt="" coords="106,57,310,98"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_actor_manager.html#a19911c85713131e68d36f60b04b77d3b" title=" " alt="" coords="103,122,313,163"/>
+<area shape="rect" id="node5" href="$classpacman_1_1render_1_1_base_renderable.html#a8406060e5ea446d30282d439bad1b1ed" title=" " alt="" coords="93,187,323,229"/>
+<area shape="rect" id="node6" href="$classpacman_1_1render_1_1_base_renderable.html#a67a0997183f24da19b776d96c1052998" title=" " alt="" coords="93,253,323,294"/>
+<area shape="rect" id="node7" href="$classpacman_1_1render_1_1_base_renderable.html#adcb8adfd62ffaa00ec1afbfc3a5db719" title=" " alt="" coords="93,318,323,359"/>
+<area shape="rect" id="node8" href="$classpacman_1_1render_1_1_base_renderable.html#a07efb2a4e9a982688c8bb3c3f21d1092" title=" " alt="" coords="93,383,323,425"/>
+<area shape="rect" id="node9" href="$classpacman_1_1entity_1_1_base_actor.html#a4b4f05808e6bd3bf923e6021fac42c65" title=" " alt="" coords="117,449,299,490"/>
+<area shape="rect" id="node10" href="$classpacman_1_1_pacman_game.html#ae497ad667e0ea20e0c0ecaf000fce53b" title=" " alt="" coords="99,515,317,541"/>
+<area shape="rect" id="node12" href="$classpacman_1_1entity_1_1_base_actor.html#ad852b9ba32a8260c84f1dcb463d09000" title="imposta l&#39;attore come appena morto. imposta appenaMorto a true e avvia un timer che lo riporta a fals..." alt="" coords="113,566,303,607"/>
+<area shape="rect" id="node13" href="$classpacman_1_1_pacman_game.html#a3de978b9745ea5fdbe99d556e40166f6" title=" " alt="" coords="108,632,308,659"/>
+<area shape="rect" id="node14" href="$classpacman_1_1_pacman_game.html#a848f92af58ba5854160693d6de839e15" title=" " alt="" coords="106,683,310,725"/>
+<area shape="rect" id="node11" href="$interfacepacman_1_1render_1_1_render_manager.html#af98bc7c48cf87390183de51906634ed6" title=" " alt="" coords="371,507,608,549"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="setAppenaMorto" name="setAppenaMorto">
+<area shape="rect" id="node1" title="imposta l&#39;attore come appena morto. imposta appenaMorto a true e avvia un timer che lo riporta a fals..." alt="" coords="247,13,364,39"/>
+<area shape="rect" id="node2" href="$classpacman_1_1threads_1_1chk_mangiato_thread.html#a13a43e6d814de94978c515cb084873b1" title=" " alt="" coords="5,5,199,47"/>
+</map>

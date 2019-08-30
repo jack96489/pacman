@@ -1,0 +1,6 @@
+<map id="canBeUsed" name="canBeUsed">
+<area shape="rect" id="node1" title=" " alt="" coords="296,78,385,105"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a005c6ce3475af04f1747085c254400c6" title="Ritorna le possibili direzione in cui può andare. Partendo dalla cella attuale controlla tutte quelle..." alt="" coords="5,5,248,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#accc789ca7f51b6cacc2b466a11ff1d40" title="muove l&#39;attore dopo gli opportuni controlli. Utilizzando il metodo Cella#canBeUsed(),..." alt="" coords="42,71,211,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="30,136,223,177"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ActorManager" name="ActorManager">
+<area shape="rect" id="node1" title="Costruttore. Richiama reset()." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_actor_manager.html#ad20897c5c8bd47f5d4005989bead0e55" title="reset. Inizializza tutti gli attributi" alt="" coords="156,5,207,32"/>
+</map>

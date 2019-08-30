@@ -1,0 +1,10 @@
+<map id="paintComponent" name="paintComponent">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,121,184"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#aa92b515bf3f2938bb669ac02c3fa5ca2" title=" " alt="" coords="169,5,407,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1mappa_1_1_mappa.html#a3d4adff2d3b35b30700bd4dbd520a6ec" title=" " alt="" coords="191,56,385,83"/>
+<area shape="rect" id="node4" href="$classpacman_1_1_pacman_game.html#a1be508f4f34c521e6a0e7e404260bbd8" title=" " alt="" coords="175,107,401,133"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_actor_manager.html#a012f3db4112422ed273d158632925f02" title="disegna gli attori. Richiama il metodo pacman.render.BaseRenderable#onRender(Graphics2D) su tutti gli..." alt="" coords="173,157,403,184"/>
+<area shape="rect" id="node6" href="$classpacman_1_1_pacman_game.html#a507063c2d4098c74fbca1f80dc58ed33" title=" " alt="" coords="185,208,391,235"/>
+<area shape="rect" id="node7" href="$classpacman_1_1_pacman_game.html#a3de978b9745ea5fdbe99d556e40166f6" title=" " alt="" coords="455,284,655,311"/>
+<area shape="rect" id="node8" href="$classpacman_1_1render_1_1swing_1_1_swing_render_manager.html#ae2eb6ac94989c901c704668988e9dc5a" title=" " alt="" coords="252,309,324,336"/>
+</map>

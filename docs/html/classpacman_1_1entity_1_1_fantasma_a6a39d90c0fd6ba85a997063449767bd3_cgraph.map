@@ -1,0 +1,5 @@
+<map id="makeVulnerable" name="makeVulnerable">
+<area shape="rect" id="node1" title="rende vulnerabile. Rende il fantasma vulnerabile per 10 secondi e cambia la direzione con quella oppo..." alt="" coords="5,35,120,61"/>
+<area shape="rect" id="node2" href="$enumpacman_1_1_direction.html#a150fb6b45d17a235838808c07b7a4e67" title=" " alt="" coords="168,5,363,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="169,57,362,98"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="getTableX" name="getTableX">
+<area shape="rect" id="node1" title=" " alt="" coords="296,111,375,138"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a005c6ce3475af04f1747085c254400c6" title="Ritorna le possibili direzione in cui può andare. Partendo dalla cella attuale controlla tutte quelle..." alt="" coords="5,5,248,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="30,71,223,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_base_actor.html#a4514a208750231ba8bef2dfa09e4aff0" title="controlla se è posizionato al centro della cella." alt="" coords="39,136,214,177"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="27,201,227,243"/>
+</map>

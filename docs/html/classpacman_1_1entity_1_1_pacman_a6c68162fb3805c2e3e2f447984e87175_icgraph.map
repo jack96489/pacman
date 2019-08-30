@@ -1,0 +1,4 @@
+<map id="checkForMele" name="checkForMele">
+<area shape="rect" id="node1" title="controlla le mele. Controlla se nella cella attuale è presente una mela e in caso positivo la mangia ..." alt="" coords="113,5,217,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_pacman.html#a5a49e4abd9117771ffaaf64ed8ff40f8" title="Tick. Richiama i metodi super#move(), checkForMele() e checkForNewDir()." alt="" coords="5,5,65,32"/>
+</map>

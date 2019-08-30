@@ -1,0 +1,4 @@
+<map id="gameOver" name="gameOver">
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,85,39"/>
+<area shape="rect" id="node2" href="$interfacepacman_1_1render_1_1_render_manager.html#af98bc7c48cf87390183de51906634ed6" title=" " alt="" coords="133,5,371,47"/>
+</map>

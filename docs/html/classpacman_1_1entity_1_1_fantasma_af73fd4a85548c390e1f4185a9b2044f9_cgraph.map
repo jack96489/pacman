@@ -1,0 +1,4 @@
+<map id="muori" name="muori">
+<area shape="rect" id="node1" title="morte. Riporta il fantasma al centro, lo riattiva e richiama setAppenaMorto()" alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#ad852b9ba32a8260c84f1dcb463d09000" title="imposta l&#39;attore come appena morto. imposta appenaMorto a true e avvia un timer che lo riporta a fals..." alt="" coords="108,5,315,47"/>
+</map>

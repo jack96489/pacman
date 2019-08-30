@@ -1,0 +1,5 @@
+<map id="checkForNewDir" name="checkForNewDir">
+<area shape="rect" id="node1" title="controlla le nuove direzioni. Controlla se è possibile cambiare direzione con una di quelle disponibi..." alt="" coords="5,46,123,73"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="171,5,353,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a4514a208750231ba8bef2dfa09e4aff0" title="controlla se è posizionato al centro della cella." alt="" coords="177,71,347,112"/>
+</map>

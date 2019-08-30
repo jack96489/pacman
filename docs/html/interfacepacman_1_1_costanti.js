@@ -1,0 +1,26 @@
+var interfacepacman_1_1_costanti =
+[
+    [ "BLINK_TIME", "interfacepacman_1_1_costanti.html#a8fc457647764d3a9fafd9433c28822ac", null ],
+    [ "CELL_HEIGHT", "interfacepacman_1_1_costanti.html#aa6a15792991293d5fe26178b9236544b", null ],
+    [ "CELL_MARGIN", "interfacepacman_1_1_costanti.html#a4af35a33057471a0dc4f69e9302e66df", null ],
+    [ "CELL_WIDTH", "interfacepacman_1_1_costanti.html#aa038c733650f220fdaf4e328bc0b4604", null ],
+    [ "CREATURA_HEIGHT", "interfacepacman_1_1_costanti.html#aebfcd540426f0aeb77d4a63128454b2a", null ],
+    [ "CREATURA_WIDTH", "interfacepacman_1_1_costanti.html#aff71433239d4c070493e163898cc379b", null ],
+    [ "FPS", "interfacepacman_1_1_costanti.html#a45b3f1043a3b9217256cdb2129b7a0c4", null ],
+    [ "FRAME_HEIGHT", "interfacepacman_1_1_costanti.html#a7d2ea052db5dce8a59d340492495b4ed", null ],
+    [ "FRAME_WIDTH", "interfacepacman_1_1_costanti.html#a2a570f918b677f85c111c2f6614d7fa9", null ],
+    [ "MAX_STORED_MOVES", "interfacepacman_1_1_costanti.html#a26f1c0762f35b7607add2738ccb9dd7e", null ],
+    [ "MOVEMENT_ERROR_MARGIN", "interfacepacman_1_1_costanti.html#abcd409cabfd8054f33dea86601765dea", null ],
+    [ "MOVEMENT_SPEED", "interfacepacman_1_1_costanti.html#ad530af663f03237c931b253f53544d26", null ],
+    [ "NUM_COLONNE", "interfacepacman_1_1_costanti.html#a16eb27e19848e2424bf57eb50d5d09c0", null ],
+    [ "NUM_FANTASMI", "interfacepacman_1_1_costanti.html#a5e3720ad7f2886f90b63c3f055eeb2ef", null ],
+    [ "NUM_RIGHE", "interfacepacman_1_1_costanti.html#aa4697fe5b6406112f07ccec5a787aedf", null ],
+    [ "NUM_VITE", "interfacepacman_1_1_costanti.html#a46bb5b99b2b40e18e877451596efa303", null ],
+    [ "PAUSE_TIME", "interfacepacman_1_1_costanti.html#a8a9d42f9c3808658b81d535212dd5214", null ],
+    [ "scale", "interfacepacman_1_1_costanti.html#a418e7934b5363ecde8269070181b3cef", null ],
+    [ "TABLE_HEIGHT", "interfacepacman_1_1_costanti.html#a9c55ce9b8d327d542c947e92d5018ca0", null ],
+    [ "TABLE_WIDTH", "interfacepacman_1_1_costanti.html#a211c1ccc132cee33d21a7aada49382ef", null ],
+    [ "TPS", "interfacepacman_1_1_costanti.html#a9589beeeb281127d27c13aa78861e911", null ],
+    [ "X_BORDER", "interfacepacman_1_1_costanti.html#a4d1326e83f509b544d322e6814aa9c4b", null ],
+    [ "Y_BORDER", "interfacepacman_1_1_costanti.html#a0ff043f7a15f58242378ce648691052c", null ]
+];

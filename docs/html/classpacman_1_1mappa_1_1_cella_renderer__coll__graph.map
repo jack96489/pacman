@@ -1,0 +1,13 @@
+<map id="CellaRenderer" name="CellaRenderer">
+<area shape="rect" id="node1" title=" " alt="" coords="423,1277,545,1369"/>
+<area shape="rect" id="node2" href="$classpacman_1_1render_1_1swing_1_1_base_swing_renderer.html" title=" " alt="" coords="325,1136,483,1228"/>
+<area shape="rect" id="node3" href="$classpacman_1_1render_1_1_base_renderer.html" title=" " alt="" coords="221,995,427,1087"/>
+<area shape="rect" id="node4" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="229,436,334,513"/>
+<area shape="rect" id="node7" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="5,649,192,932"/>
+<area shape="rect" id="node5" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="210,145,353,237"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1render_1_1_renderable.html" title=" " alt="" coords="233,5,330,83"/>
+<area shape="rect" id="node11" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="474,261,579,339"/>
+<area shape="rect" id="node8" href="$interfacepacman_1_1_costanti.html" title=" " alt="" coords="375,363,534,587"/>
+<area shape="rect" id="node9" title=" " alt="" coords="137,436,189,513"/>
+<area shape="rect" id="node10" href="$interfacepacman_1_1render_1_1_render_manager.html" title=" " alt="" coords="252,737,383,844"/>
+</map>

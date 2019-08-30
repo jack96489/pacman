@@ -1,0 +1,8 @@
+<map id="onTick" name="onTick">
+<area shape="rect" id="node1" title="Tick. Muove il fantasma. In caso di movimento possibile c&#39;è 1 probabilità su 3 di cambiare direzione ..." alt="" coords="5,143,65,170"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#accc789ca7f51b6cacc2b466a11ff1d40" title="muove l&#39;attore dopo gli opportuni controlli. Utilizzando il metodo Cella#canBeUsed(),..." alt="" coords="150,5,319,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a005c6ce3475af04f1747085c254400c6" title="Ritorna le possibili direzione in cui può andare. Partendo dalla cella attuale controlla tutte quelle..." alt="" coords="113,71,356,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_base_actor.html#a4514a208750231ba8bef2dfa09e4aff0" title="controlla se è posizionato al centro della cella." alt="" coords="147,136,322,177"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="138,201,331,243"/>
+<area shape="rect" id="node6" href="$enumpacman_1_1_direction.html#a03284ad66c0fb6c75911f6f02fab3767" title=" " alt="" coords="141,267,328,294"/>
+</map>

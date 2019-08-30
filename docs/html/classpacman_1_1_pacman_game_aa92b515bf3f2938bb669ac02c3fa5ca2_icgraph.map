@@ -1,0 +1,8 @@
+<map id="getGameMap" name="getGameMap">
+<area shape="rect" id="node1" title=" " alt="" coords="296,143,396,170"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a005c6ce3475af04f1747085c254400c6" title="Ritorna le possibili direzione in cui può andare. Partendo dalla cella attuale controlla tutte quelle..." alt="" coords="5,5,248,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#accc789ca7f51b6cacc2b466a11ff1d40" title="muove l&#39;attore dopo gli opportuni controlli. Utilizzando il metodo Cella#canBeUsed(),..." alt="" coords="42,71,211,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="30,136,223,177"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="27,201,227,243"/>
+<area shape="rect" id="node6" href="$classpacman_1_1render_1_1swing_1_1_swing_render_manager.html#aac9233d06f3c093fc37139d7d2b258f6" title=" " alt="" coords="21,267,232,308"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="loadImage" name="loadImage">
+<area shape="rect" id="node1" title="carica un&#39;immagine. Ritorna un oggetto Image contenente l&#39;immagine caricata" alt="" coords="176,5,257,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_fantasma_1_1_fantasma_images.html#a9a15de75eb77d7442e124baa8fa1343e" title="Costruttore. Inizializza gli attributi." alt="" coords="5,5,128,32"/>
+</map>

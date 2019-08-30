@@ -1,0 +1,7 @@
+<map id="keyPressed" name="keyPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,96,91"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#a1be508f4f34c521e6a0e7e404260bbd8" title=" " alt="" coords="144,5,371,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_actor_manager.html#a46d686412d78012dd648730f0b527758" title=" " alt="" coords="152,57,363,98"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_pacman.html#aac06e0f1073c4ce0f8008c13eb6ca1dd" title="tasto premuto. Richiama il metodo changeDirection(Direction) passandogli la direzione corrispondente" alt="" coords="159,122,356,163"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_pacman.html#a6baa1c53a04548b85e22ec42286a9697" title="cambia direzione. Aggiunge la direzione passata alla code nuoveDirezioni se non è uguale a quella pre..." alt="" coords="419,122,621,163"/>
+</map>

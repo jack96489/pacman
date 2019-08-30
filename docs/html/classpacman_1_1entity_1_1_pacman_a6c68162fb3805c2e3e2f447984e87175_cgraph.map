@@ -1,0 +1,11 @@
+<map id="checkForMele" name="checkForMele">
+<area shape="rect" id="node1" title="controlla le mele. Controlla se nella cella attuale è presente una mela e in caso positivo la mangia ..." alt="" coords="5,162,109,189"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="182,5,373,47"/>
+<area shape="rect" id="node3" href="$classpacman_1_1mappa_1_1_cella.html#a70aa6d5ee11bee40613b573626008079" title=" " alt="" coords="182,71,373,112"/>
+<area shape="rect" id="node4" href="$classpacman_1_1_pacman_game.html#a9ab98fb6e803ce5fe8e0c85b377fea52" title=" " alt="" coords="164,137,391,163"/>
+<area shape="rect" id="node6" href="$classpacman_1_1_pacman_game.html#ae3c02799905cbbf2cdc79d08969f25fc" title=" " alt="" coords="157,187,397,214"/>
+<area shape="rect" id="node7" href="$classpacman_1_1mappa_1_1_cella.html#afbaed39567b6ee4500bf225776143a5a" title=" " alt="" coords="163,238,392,265"/>
+<area shape="rect" id="node8" href="$classpacman_1_1_pacman_game.html#a4e26422d48d1c8a9a52efbdbfc0b50d1" title=" " alt="" coords="177,289,378,331"/>
+<area shape="rect" id="node5" href="$classpacman_1_1_pacman_game.html#a5c2b45cb029a487b0dc18e2abb65493b" title=" " alt="" coords="445,137,688,163"/>
+<area shape="rect" id="node9" href="$classpacman_1_1entity_1_1_actor_manager.html#a1866b786c0e6ac48fc0f9479cbbb94cb" title="rende vulnerabili tutti i fantasmi. Per ogni fanstasma richiama Fantasma#makeVulnerable()" alt="" coords="456,289,677,331"/>
+</map>

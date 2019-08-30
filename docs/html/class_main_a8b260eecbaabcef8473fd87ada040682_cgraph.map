@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,56,65"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#a9ab98fb6e803ce5fe8e0c85b377fea52" title=" " alt="" coords="104,13,331,40"/>
+<area shape="rect" id="node4" href="$classpacman_1_1_pacman_game.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="122,64,313,91"/>
+<area shape="rect" id="node3" href="$classpacman_1_1_pacman_game.html#a5c2b45cb029a487b0dc18e2abb65493b" title=" " alt="" coords="379,13,621,40"/>
+<area shape="rect" id="node5" href="$classpacman_1_1_pacman_game.html#ad20897c5c8bd47f5d4005989bead0e55" title=" " alt="" coords="406,64,594,91"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1render_1_1_render_manager.html#a7d9edd8b0a8d0d2f737eb5ee0b0a5040" title=" " alt="" coords="669,5,912,32"/>
+<area shape="rect" id="node7" href="$classpacman_1_1entity_1_1_actor_manager.html#a0165883282c4513a7c54bdfc2079a1fd" title=" " alt="" coords="685,57,896,98"/>
+<area shape="rect" id="node8" href="$classpacman_1_1entity_1_1_actor_manager.html#a46d686412d78012dd648730f0b527758" title=" " alt="" coords="685,122,896,163"/>
+</map>

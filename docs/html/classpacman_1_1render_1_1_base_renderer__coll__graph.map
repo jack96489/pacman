@@ -1,0 +1,10 @@
+<map id="BaseRenderer&lt; T extends BaseRenderable, R extends RenderManager &gt;" name="BaseRenderer&lt; T extends BaseRenderable, R extends RenderManager &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="103,932,291,1039"/>
+<area shape="rect" id="node2" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="24,373,129,451"/>
+<area shape="rect" id="node5" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="103,587,290,869"/>
+<area shape="rect" id="node3" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="5,145,148,237"/>
+<area shape="rect" id="node4" href="$interfacepacman_1_1render_1_1_renderable.html" title=" " alt="" coords="101,5,199,83"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1_costanti.html" title=" " alt="" coords="224,300,383,524"/>
+<area shape="rect" id="node7" title=" " alt="" coords="407,373,459,451"/>
+<area shape="rect" id="node8" href="$interfacepacman_1_1render_1_1_render_manager.html" title=" " alt="" coords="350,675,481,781"/>
+</map>

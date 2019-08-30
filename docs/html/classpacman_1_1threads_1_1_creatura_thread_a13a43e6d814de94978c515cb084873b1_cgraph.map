@@ -1,0 +1,6 @@
+<map id="run" name="run">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,45,98"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#a848f92af58ba5854160693d6de839e15" title=" " alt="" coords="93,5,297,47"/>
+<area shape="rect" id="node3" href="$interfacepacman_1_1entity_1_1_entity.html#a5a49e4abd9117771ffaaf64ed8ff40f8" title="Aggiorna l&#39;entità" alt="" coords="103,71,287,98"/>
+<area shape="rect" id="node4" href="$classpacman_1_1_pacman_game.html#a120fbe4ee15d6360177d87b3e2dc7403" title=" " alt="" coords="93,123,297,164"/>
+</map>

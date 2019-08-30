@@ -1,0 +1,8 @@
+<map id="getInstance" name="getInstance">
+<area shape="rect" id="node1" title=" " alt="" coords="507,97,596,124"/>
+<area shape="rect" id="node2" href="$class_main.html#a8b260eecbaabcef8473fd87ada040682" title=" " alt="" coords="314,5,397,32"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="255,57,455,98"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_pacman.html#a6c68162fb3805c2e3e2f447984e87175" title="controlla le mele. Controlla se nella cella attuale è presente una mela e in caso positivo la mangia ..." alt="" coords="258,122,453,163"/>
+<area shape="rect" id="node6" href="$classpacman_1_1render_1_1_base_renderable.html#ae9bbfdbd054118eb6a72fcda45b21945" title=" " alt="" coords="252,187,459,229"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_pacman.html#a5a49e4abd9117771ffaaf64ed8ff40f8" title="Tick. Richiama i metodi super#move(), checkForMele() e checkForNewDir()." alt="" coords="5,129,204,156"/>
+</map>

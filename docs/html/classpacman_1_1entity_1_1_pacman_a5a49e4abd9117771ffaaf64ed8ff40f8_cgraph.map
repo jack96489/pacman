@@ -1,0 +1,16 @@
+<map id="onTick" name="onTick">
+<area shape="rect" id="node1" title="Tick. Richiama i metodi super#move(), checkForMele() e checkForNewDir()." alt="" coords="5,187,65,214"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_base_actor.html#accc789ca7f51b6cacc2b466a11ff1d40" title="muove l&#39;attore dopo gli opportuni controlli. Utilizzando il metodo Cella#canBeUsed(),..." alt="" coords="113,121,283,163"/>
+<area shape="rect" id="node3" href="$classpacman_1_1entity_1_1_pacman.html#a6c68162fb3805c2e3e2f447984e87175" title="controlla le mele. Controlla se nella cella attuale è presente una mela e in caso positivo la mangia ..." alt="" coords="146,187,250,214"/>
+<area shape="rect" id="node12" href="$classpacman_1_1entity_1_1_pacman.html#a6911fc1acda0c1fab1200d3633663c6c" title="controlla le nuove direzioni. Controlla se è possibile cambiare direzione con una di quelle disponibi..." alt="" coords="139,362,257,389"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_base_actor.html#a6cd2c951f49c5cf24a510f410886b7c7" title="ritorna la cella attuale." alt="" coords="355,5,546,47"/>
+<area shape="rect" id="node5" href="$classpacman_1_1mappa_1_1_cella.html#a70aa6d5ee11bee40613b573626008079" title=" " alt="" coords="355,71,546,112"/>
+<area shape="rect" id="node6" href="$classpacman_1_1_pacman_game.html#a9ab98fb6e803ce5fe8e0c85b377fea52" title=" " alt="" coords="337,137,564,163"/>
+<area shape="rect" id="node8" href="$classpacman_1_1_pacman_game.html#ae3c02799905cbbf2cdc79d08969f25fc" title=" " alt="" coords="331,187,571,214"/>
+<area shape="rect" id="node9" href="$classpacman_1_1mappa_1_1_cella.html#afbaed39567b6ee4500bf225776143a5a" title=" " alt="" coords="336,238,565,265"/>
+<area shape="rect" id="node10" href="$classpacman_1_1_pacman_game.html#a4e26422d48d1c8a9a52efbdbfc0b50d1" title=" " alt="" coords="350,289,551,331"/>
+<area shape="rect" id="node7" href="$classpacman_1_1_pacman_game.html#a5c2b45cb029a487b0dc18e2abb65493b" title=" " alt="" coords="619,137,861,163"/>
+<area shape="rect" id="node11" href="$classpacman_1_1entity_1_1_actor_manager.html#a1866b786c0e6ac48fc0f9479cbbb94cb" title="rende vulnerabili tutti i fantasmi. Per ogni fanstasma richiama Fantasma#makeVulnerable()" alt="" coords="629,289,851,331"/>
+<area shape="rect" id="node13" href="$classpacman_1_1entity_1_1_base_actor.html#a466f04e18fdb4ef524687daf02b871d0" title="controlla se è possibile cambiare la direzione attuale in quella data." alt="" coords="359,355,542,396"/>
+<area shape="rect" id="node14" href="$classpacman_1_1entity_1_1_base_actor.html#a4514a208750231ba8bef2dfa09e4aff0" title="controlla se è posizionato al centro della cella." alt="" coords="366,420,535,461"/>
+</map>

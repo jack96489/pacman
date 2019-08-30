@@ -1,0 +1,12 @@
+<map id="Mappa" name="Mappa">
+<area shape="rect" id="node1" title=" " alt="" coords="459,1491,605,1671"/>
+<area shape="rect" id="node2" href="$interfacepacman_1_1_costanti.html" title=" " alt="" coords="441,300,599,524"/>
+<area shape="rect" id="node3" href="$classpacman_1_1mappa_1_1_cella.html" title=" " alt="" coords="352,1277,475,1413"/>
+<area shape="rect" id="node4" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="243,939,413,1207"/>
+<area shape="rect" id="node9" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="235,587,421,869"/>
+<area shape="rect" id="node5" href="$interfacepacman_1_1render_1_1_renderable.html" title=" " alt="" coords="86,5,183,83"/>
+<area shape="rect" id="node7" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="63,145,206,237"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1render_1_1_renderer.html" title=" " alt="" coords="82,373,187,451"/>
+<area shape="rect" id="node8" title=" " alt="" coords="251,373,303,451"/>
+<area shape="rect" id="node10" href="$enumpacman_1_1mappa_1_1_cella_1_1_tipo_cella.html" title=" " alt="" coords="88,932,219,1215"/>
+</map>

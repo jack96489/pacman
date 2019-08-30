@@ -1,0 +1,12 @@
+<map id="BaseActor&lt; T extends BaseActor &gt;" name="BaseActor&lt; T extends BaseActor &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="197,1077,370,1331"/>
+<area shape="rect" id="node7" href="$classpacman_1_1entity_1_1_base_actor.html" title=" " alt="" coords="121,1393,294,1632"/>
+<area shape="rect" id="node9" href="$classpacman_1_1entity_1_1_base_actor.html" title=" " alt="" coords="318,1393,491,1632"/>
+<area shape="rect" id="node2" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="209,731,357,1028"/>
+<area shape="rect" id="node3" href="$interfacepacman_1_1render_1_1_renderable.html" title=" " alt="" coords="104,79,201,156"/>
+<area shape="rect" id="node5" href="$classpacman_1_1render_1_1_base_renderable.html" title=" " alt="" coords="190,279,377,591"/>
+<area shape="rect" id="node6" href="$interfacepacman_1_1entity_1_1_entity.html" title=" " alt="" coords="5,615,132,707"/>
+<area shape="rect" id="node4" href="$interfacepacman_1_1_costanti.html" title=" " alt="" coords="371,5,529,229"/>
+<area shape="rect" id="node8" href="$classpacman_1_1entity_1_1_pacman.html" title=" " alt="" coords="141,1711,274,1861"/>
+<area shape="rect" id="node10" href="$classpacman_1_1entity_1_1_fantasma.html" title=" " alt="" coords="337,1681,472,1891"/>
+</map>

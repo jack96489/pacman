@@ -1,0 +1,7 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,60,91"/>
+<area shape="rect" id="node2" href="$classpacman_1_1_pacman_game.html#ad20897c5c8bd47f5d4005989bead0e55" title=" " alt="" coords="108,64,159,91"/>
+<area shape="rect" id="node3" href="$interfacepacman_1_1render_1_1_render_manager.html#a7d9edd8b0a8d0d2f737eb5ee0b0a5040" title=" " alt="" coords="207,5,449,32"/>
+<area shape="rect" id="node4" href="$classpacman_1_1entity_1_1_actor_manager.html#a0165883282c4513a7c54bdfc2079a1fd" title=" " alt="" coords="223,57,433,98"/>
+<area shape="rect" id="node5" href="$classpacman_1_1entity_1_1_actor_manager.html#a46d686412d78012dd648730f0b527758" title=" " alt="" coords="223,122,433,163"/>
+</map>

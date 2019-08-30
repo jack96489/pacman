@@ -1,0 +1,4 @@
+<map id="onKeyPressed" name="onKeyPressed">
+<area shape="rect" id="node1" title="tasto premuto. Richiama il metodo changeDirection(Direction) passandogli la direzione corrispondente" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$classpacman_1_1entity_1_1_pacman.html#a6baa1c53a04548b85e22ec42286a9697" title="cambia direzione. Aggiunge la direzione passata alla code nuoveDirezioni se non è uguale a quella pre..." alt="" coords="160,5,275,32"/>
+</map>
