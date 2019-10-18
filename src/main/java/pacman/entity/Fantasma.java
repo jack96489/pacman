@@ -42,11 +42,11 @@ public class Fantasma extends BaseActor<Fantasma> {
 
     /**
      * @brief Costruttore.
-     * Inizializza gli attributi richiamando anche {@link super#BaseActor()}
+     * Inizializza gli attributi richiamando anche {@link super#BaseActor(int,int)}
      * @param colore colore del fantasmna
      */
     public Fantasma(Color colore) {
-        super();
+        super(X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2,Y_BORDER + NUM_RIGHE / 2 * CELL_HEIGHT + (CELL_HEIGHT - CREATURA_HEIGHT) / 2);
         this.color = colore;
         stato = StatoFantasma.ATTIVO;
         immagini = new FantasmaImages();
@@ -199,12 +199,19 @@ public class Fantasma extends BaseActor<Fantasma> {
 
     /**
      * @brief morte.
-     * Riporta il fantasma al centro, lo riattiva e richiama {@link #setAppenaMorto()}
+     * Richiama {@link BaseActor#muori()} e imposta lo stato del fantasma si attivo}
      */
+    @Override
     public void muori() {
-        x = X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2;
-        y = Y_BORDER + NUM_RIGHE / 2 * CELL_HEIGHT + (CELL_HEIGHT - CREATURA_HEIGHT) / 2;
-        stato = StatoFantasma.ATTIVO;       //una volta mangiato torna attivo
-        setAppenaMorto();
+        super.muori();
+        new java.util.Timer().schedule( //per 2 secondi oltre a quelli in cui il gioco sta fermo non posso essere mangiato
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        stato = StatoFantasma.ATTIVO;       //una volta mangiato torna attivo
+                    }
+                },
+                PAUSE_TIME
+        );
     }
 }

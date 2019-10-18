@@ -30,8 +30,7 @@ public class Pacman extends BaseActor<Pacman> {
      * Inizializza gli attributi richiamando anche {@link super#BaseActor()}
      */
     public Pacman() {
-        super();
-        y = 23 * CELL_HEIGHT + Y_BORDER + (CREATURA_HEIGHT/10);     //propozione a caso per farlo spawnare giusto
+        super(X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2, 23 * CELL_HEIGHT + Y_BORDER + (CREATURA_HEIGHT/10)); //propozione a caso per farlo spawnare giusto
         color = Color.yellow;
         nuoveDirezioni = new LinkedBlockingQueue<>(MAX_STORED_MOVES);
     }

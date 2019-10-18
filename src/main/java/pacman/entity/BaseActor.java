@@ -22,6 +22,7 @@ import java.util.List;
  * @param <T>
  */
 public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> implements Entity, Costanti {
+    protected final int startX, startY;
     /**
      * puntarore all'istanza di gioco
      */
@@ -45,8 +46,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
      * Inizializza gli attributi con valori di default, utilizzande {@link Costanti}.
      * Richiama {@link #BaseActor(int, int, int, int, Color)}
      */
-    public BaseActor() {
-        this(X_BORDER + NUM_COLONNE / 2 * CELL_WIDTH + (CELL_WIDTH - CREATURA_WIDTH) / 2, Y_BORDER + NUM_RIGHE / 2 * CELL_HEIGHT + (CELL_HEIGHT - CREATURA_HEIGHT) / 2, CREATURA_WIDTH, CREATURA_HEIGHT, Color.BLACK);
+    public BaseActor(int x, int y) {
+        this(x, y, CREATURA_WIDTH, CREATURA_HEIGHT, Color.BLACK);
     }
 
     /**
@@ -61,6 +62,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     public BaseActor(int x, int y, int width, int height, Color color) {
         super(x, y, width, height, color);
         currentDir = Direction.RIGHT;
+        startX = x;
+        startY = y;
     }
 
     /**
@@ -209,7 +212,7 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
      * @brief imposta l'attore come appena morto.
      * imposta {@link #appenaMorto} a true e avvia un timer che lo riporta a false dopo {@link Costanti#BLINK_TIME} secondi
      */
-    public void setAppenaMorto() {
+    private void setAppenaMorto() {
         this.appenaMorto = true;
         new java.util.Timer().schedule( //per 2 secondi oltre a quelli in cui il gioco sta fermo non posso essere mangiato
                 new java.util.TimerTask() {
@@ -220,5 +223,29 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
                 },
                 BLINK_TIME
         );
+    }
+
+
+    /**
+     * @brief morte.
+     * Riporta l'attore al centro, lo riattiva e richiama {@link #setAppenaMorto()}
+     */
+    public void muori() {
+        setAppenaMorto();
+        new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        reset();
+                    }
+                },
+                PAUSE_TIME
+        );
+    }
+
+    private void reset(){
+        x = startX;
+        y = startY;
+        currentDir = Direction.RIGHT;
     }
 }

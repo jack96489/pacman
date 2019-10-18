@@ -28,7 +28,7 @@ public class chkMangiatoThread extends BaseThread {
                             System.out.println("fantasma " + f.getColor() + " morto");
                         } else if (!creatura.isAppenaMorto()) {
                             dati.gameOver();
-                            creatura.setAppenaMorto();
+                            creatura.muori();
                             if (dati.getVite() <= 0)
                                 return;
                             try {
