@@ -16,6 +16,7 @@ public class PacmanRenderer extends BaseSwingRenderer<Pacman> {
         //System.out.println(toRender);
         //System.out.println(g2d);
         g2d.setColor(toRender.getColor());
+//        g2d.drawRect(toRender.getX(),toRender.getY(),toRender.getWidth(),toRender.getHeight());
         int startAngle = 0;
         switch (toRender.getCurrentDir()) {
             case UP:

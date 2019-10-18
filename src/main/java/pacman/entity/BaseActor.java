@@ -18,6 +18,7 @@ import java.util.List;
 /**
  * La classe rappresenta una qualsiasi personaggio del gioco (pacmna e fantasmi)
  * Estende {@link BaseRenderable} e implementa {@link Entity} e {@link Costanti}
+ *
  * @param <T>
  */
 public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> implements Entity, Costanti {
@@ -28,6 +29,7 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
 
     /**
      * Direzione attuale
+     *
      * @see Direction
      */
     protected Direction currentDir;
@@ -48,13 +50,13 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
+     * @param x      coordinata x
+     * @param y      coordinata y
+     * @param width  larghezza
+     * @param height altezza
+     * @param color  colore
      * @brief Costruttore.
      * Inizializza gli attributi con i valori passati.
-     * @param x coordinata x
-     * @param y coordinata y
-     * @param width larghezza
-     * @param height altezza
-     * @param color colore
      */
     public BaseActor(int x, int y, int width, int height, Color color) {
         super(x, y, width, height, color);
@@ -62,9 +64,9 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
+     * @return lista di direzioni
      * @brief Ritorna le possibili direzione in cui può andare.
      * Partendo dalla cella attuale controlla tutte quelle intorno e crea una lista con le possibili direzioni.
-     * @return lista di direzioni
      */
     public List<Direction> possibleNewDirections() {
         List<Direction> possibleDirs = new ArrayList<>();
@@ -88,10 +90,10 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
+     * @return true se è stato possibile il movimento, false in caso contrario
      * @brief muove l'attore dopo gli opportuni controlli.
      * Utilizzando il metodo {@link Cella#canBeUsed()}, controlla che la casella in cui si deve spostare (in base alla direzione {@link #currentDir}) sia utilizzabile.
      * In caso di uscita dalla mappa lo teletrasporta dall'alltra parte.
-     * @return true se è stato possibile il movimento, false in caso contrario
      */
     protected boolean move() {
 //        System.out.println(TABLE_WIDTH + X_BORDER - (x + width));
@@ -103,6 +105,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
             return true;
         } else {    //movimento normale
             int _x = x, _y = y;
+//            if(this instanceof Pacman)
+//                System.out.println(_x+" - "+(_x + width / 2 - X_BORDER) / CELL_WIDTH);
             switch (currentDir) {
                 case UP:
                     _y -= CELL_HEIGHT / 2 + MOVEMENT_ERROR_MARGIN / 2;
@@ -120,7 +124,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
 //        System.out.println("X: " + x + "-" + _x);
 //        System.out.println("Y: " + y + "-" + _y);
             int tableX = (_x + width / 2 - X_BORDER) / CELL_WIDTH, tableY = (_y + height / 2 - Y_BORDER) / CELL_HEIGHT;
-            Cella nuova = game.getGameMap().getCella(tableX, tableY);
+//            if (this instanceof Pacman) System.out.println(tableX);
+            final Cella nuova = game.getGameMap().getCella(tableX, tableY);
 
             if (nuova.canBeUsed()) {
                 switch (currentDir) {
@@ -144,9 +149,9 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
-     * @brief controlla se è possibile cambiare la direzione attuale in quella data.
      * @param dir nuova direzione
      * @return true se è possibile cambiare direzione, false in caso contrario
+     * @brief controlla se è possibile cambiare la direzione attuale in quella data.
      * @see pacman.mappa.Mappa#getCellaAdiacente(int, int, Direction)
      * @see #getTableX()
      * @see #getTableY()
@@ -159,8 +164,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
-     * @brief controlla se è posizionato al centro della cella.
      * @return true se è centrato, false in case contrario
+     * @brief controlla se è posizionato al centro della cella.
      * @see #getTableX()
      * @see #getTableY()
      * @see #getMiddleX()
@@ -184,8 +189,8 @@ public abstract class BaseActor<T extends BaseActor> extends BaseRenderable<T> i
     }
 
     /**
-     * @brief ritorna la cella attuale.
      * @return cella attuale
+     * @brief ritorna la cella attuale.
      * @see #getTableY()
      * @see #getTableY()
      */
